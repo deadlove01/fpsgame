@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: c746f61bad1788a4caf6437fb6e9ea1e
+timeCreated: 1482023625
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Model_0000
+    100004: Model_0001
+    100006: Model_0002
+    100008: Model_0003
+    100010: Model_0004
+    100012: Model_0005
+    100014: Model_0006
+    400000: //RootNode
+    400002: Model_0000
+    400004: Model_0001
+    400006: Model_0002
+    400008: Model_0003
+    400010: Model_0004
+    400012: Model_0005
+    400014: Model_0006
+    2300000: Model_0000
+    2300002: Model_0001
+    2300004: Model_0002
+    2300006: Model_0003
+    2300008: Model_0004
+    2300010: Model_0005
+    2300012: Model_0006
+    3300000: Model_0000
+    3300002: Model_0001
+    3300004: Model_0002
+    3300006: Model_0003
+    3300008: Model_0004
+    3300010: Model_0005
+    3300012: Model_0006
+    4300000: Model_0000
+    4300002: Model_0001
+    4300004: Model_0002
+    4300006: Model_0003
+    4300008: Model_0004
+    4300010: Model_0005
+    4300012: Model_0006
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1-teks
+    second: {fileID: 2100000, guid: 2b465e445a79f094db411829d87eea79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2-teks
+    second: {fileID: 2100000, guid: d68a0120ff31d5b489b2b1990445fd07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2-teksn
+    second: {fileID: 2100000, guid: 9a9799e7176503e44b178e33692f4b8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 3-teks
+    second: {fileID: 2100000, guid: 3399a7053e12b4046a86e06a49f7bc75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 3-teksn
+    second: {fileID: 2100000, guid: c6c2eeb095a34a248b3a99c412aff221, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 4-teks
+    second: {fileID: 2100000, guid: d8ada3e250802f943ae1bf8284b9f0db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 4-teksn
+    second: {fileID: 2100000, guid: 9fda3200da91bfe44964e0e91980efbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 6-teks
+    second: {fileID: 2100000, guid: c6f0047ce3f288548b8a5757acaad5fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: snowdew
+    second: {fileID: 2100000, guid: e6d433c25a066b146a1a17c29f2b660b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trrm_wood
+    second: {fileID: 2100000, guid: 43db3ebb6bf56c245b00a8a07d2d0a6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trrm_wood2
+    second: {fileID: 2100000, guid: cdf141a95d72fd84ea179937e88bb8e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '{ladder2'
+    second: {fileID: 2100000, guid: a166667f1a835e94ca217973e018bd0b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

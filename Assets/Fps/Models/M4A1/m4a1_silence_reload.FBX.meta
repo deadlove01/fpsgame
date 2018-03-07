@@ -1,0 +1,399 @@
+fileFormatVersion: 2
+guid: aed9807ed980ebb479b42ff6e055dd66
+timeCreated: 1516825260
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: hands_reference
+    100002: m4a1_reference
+    100004: //RootNode
+    100006: v_weapon
+    100008: v_weapon.cube_Trigger
+    100010: v_weapon.eff16
+    100012: v_weapon.eff18
+    100014: v_weapon.eff2
+    100016: v_weapon.eff9
+    100018: v_weapon.Hands_parent
+    100020: v_weapon.L_wrist_helper
+    100022: v_weapon.Left_Arm
+    100024: v_weapon.Left_Hand
+    100026: v_weapon.Left_Index01
+    100028: v_weapon.Left_Index02
+    100030: v_weapon.Left_Index03
+    100032: v_weapon.Left_Middle01
+    100034: v_weapon.Left_Middle02
+    100036: v_weapon.Left_Middle03
+    100038: v_weapon.Left_Pinky01
+    100040: v_weapon.Left_Pinky02
+    100042: v_weapon.Left_Pinky03
+    100044: v_weapon.Left_Ring01
+    100046: v_weapon.Left_Ring02
+    100048: v_weapon.Left_Ring03
+    100050: v_weapon.Left_Thumb01
+    100052: v_weapon.Left_Thumb03
+    100054: v_weapon.Left_Thumb_02
+    100056: v_weapon.m4_Clip
+    100058: v_weapon.m4_Eject
+    100060: v_weapon.m4_Parent
+    100062: v_weapon.m4_Silencer
+    100064: v_weapon.R_wrist_helper
+    100066: v_weapon.Right_Arm
+    100068: v_weapon.Right_Hand
+    100070: v_weapon.Right_Index01
+    100072: v_weapon.Right_Index02
+    100074: v_weapon.Right_Index03
+    100076: v_weapon.Right_Middle01
+    100078: v_weapon.Right_Middle02
+    100080: v_weapon.Right_Middle03
+    100082: v_weapon.Right_Pinky01
+    100084: v_weapon.Right_Pinky02
+    100086: v_weapon.Right_Pinky03
+    100088: v_weapon.Right_Ring01
+    100090: v_weapon.Right_Ring02
+    100092: v_weapon.Right_Ring03
+    100094: v_weapon.Right_Thumb01
+    100096: v_weapon.Right_Thumb02
+    100098: v_weapon.Right_Thumb03
+    100100: v_weapon.Root16
+    100102: v_weapon.Root17
+    100104: v_weapon.Root18
+    100106: v_weapon.Root19
+    100108: v_weapon.Root20
+    100110: v_weapon.Root21
+    100112: v_weapon.Root23
+    100114: v_weapon.Root24
+    100116: v_weapon.Root25
+    100118: v_weapon.Root26
+    100120: v_weapon.Root27
+    100122: v_weapon.Root28
+    100124: v_weapon.Root34
+    100126: v_weapon.Root36
+    100128: v_weapon.Root98
+    100130: v_weapon.Root99
+    400000: hands_reference
+    400002: m4a1_reference
+    400004: //RootNode
+    400006: v_weapon
+    400008: v_weapon.cube_Trigger
+    400010: v_weapon.eff16
+    400012: v_weapon.eff18
+    400014: v_weapon.eff2
+    400016: v_weapon.eff9
+    400018: v_weapon.Hands_parent
+    400020: v_weapon.L_wrist_helper
+    400022: v_weapon.Left_Arm
+    400024: v_weapon.Left_Hand
+    400026: v_weapon.Left_Index01
+    400028: v_weapon.Left_Index02
+    400030: v_weapon.Left_Index03
+    400032: v_weapon.Left_Middle01
+    400034: v_weapon.Left_Middle02
+    400036: v_weapon.Left_Middle03
+    400038: v_weapon.Left_Pinky01
+    400040: v_weapon.Left_Pinky02
+    400042: v_weapon.Left_Pinky03
+    400044: v_weapon.Left_Ring01
+    400046: v_weapon.Left_Ring02
+    400048: v_weapon.Left_Ring03
+    400050: v_weapon.Left_Thumb01
+    400052: v_weapon.Left_Thumb03
+    400054: v_weapon.Left_Thumb_02
+    400056: v_weapon.m4_Clip
+    400058: v_weapon.m4_Eject
+    400060: v_weapon.m4_Parent
+    400062: v_weapon.m4_Silencer
+    400064: v_weapon.R_wrist_helper
+    400066: v_weapon.Right_Arm
+    400068: v_weapon.Right_Hand
+    400070: v_weapon.Right_Index01
+    400072: v_weapon.Right_Index02
+    400074: v_weapon.Right_Index03
+    400076: v_weapon.Right_Middle01
+    400078: v_weapon.Right_Middle02
+    400080: v_weapon.Right_Middle03
+    400082: v_weapon.Right_Pinky01
+    400084: v_weapon.Right_Pinky02
+    400086: v_weapon.Right_Pinky03
+    400088: v_weapon.Right_Ring01
+    400090: v_weapon.Right_Ring02
+    400092: v_weapon.Right_Ring03
+    400094: v_weapon.Right_Thumb01
+    400096: v_weapon.Right_Thumb02
+    400098: v_weapon.Right_Thumb03
+    400100: v_weapon.Root16
+    400102: v_weapon.Root17
+    400104: v_weapon.Root18
+    400106: v_weapon.Root19
+    400108: v_weapon.Root20
+    400110: v_weapon.Root21
+    400112: v_weapon.Root23
+    400114: v_weapon.Root24
+    400116: v_weapon.Root25
+    400118: v_weapon.Root26
+    400120: v_weapon.Root27
+    400122: v_weapon.Root28
+    400124: v_weapon.Root34
+    400126: v_weapon.Root36
+    400128: v_weapon.Root98
+    400130: v_weapon.Root99
+    4300000: m4a1_reference
+    4300002: hands_reference
+    7400000: sil_reload
+    9500000: //RootNode
+    13700000: hands_reference
+    13700002: m4a1_reference
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: sil_reload
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 114
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.20272905
+        functionName: ReloadClipOut
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: c9215bfa35e804444807c1174c01ce66,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5088063
+        functionName: ReloadClipIn
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: c9215bfa35e804444807c1174c01ce66,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.78669274
+        functionName: ReloadBoltPull
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: c9215bfa35e804444807c1174c01ce66,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hands_reference
+        weight: 1
+      - path: m4a1_reference
+        weight: 1
+      - path: v_weapon
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root17
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root17/v_weapon.Left_Thumb01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root17/v_weapon.Left_Thumb01/v_weapon.Left_Thumb_02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root17/v_weapon.Left_Thumb01/v_weapon.Left_Thumb_02/v_weapon.Left_Thumb03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root18
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root18/v_weapon.Left_Pinky01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root18/v_weapon.Left_Pinky01/v_weapon.Left_Pinky02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root18/v_weapon.Left_Pinky01/v_weapon.Left_Pinky02/v_weapon.Left_Pinky03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root19
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root19/v_weapon.Left_Ring01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root19/v_weapon.Left_Ring01/v_weapon.Left_Ring02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root19/v_weapon.Left_Ring01/v_weapon.Left_Ring02/v_weapon.Left_Ring03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root20
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root20/v_weapon.Left_Middle01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root20/v_weapon.Left_Middle01/v_weapon.Left_Middle02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root20/v_weapon.Left_Middle01/v_weapon.Left_Middle02/v_weapon.Left_Middle03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root21
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root21/v_weapon.Left_Index01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root21/v_weapon.Left_Index01/v_weapon.Left_Index02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.eff16/v_weapon.Root16/v_weapon.Left_Hand/v_weapon.eff2/v_weapon.Root21/v_weapon.Left_Index01/v_weapon.Left_Index02/v_weapon.Left_Index03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.Root99
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root34/v_weapon.Left_Arm/v_weapon.Root99/v_weapon.L_wrist_helper
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root24
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root24/v_weapon.Right_Thumb01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root24/v_weapon.Right_Thumb01/v_weapon.Right_Thumb02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root24/v_weapon.Right_Thumb01/v_weapon.Right_Thumb02/v_weapon.Right_Thumb03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root25
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root25/v_weapon.Right_Index01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root25/v_weapon.Right_Index01/v_weapon.Right_Index02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root25/v_weapon.Right_Index01/v_weapon.Right_Index02/v_weapon.Right_Index03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root26
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root26/v_weapon.Right_Middle01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root26/v_weapon.Right_Middle01/v_weapon.Right_Middle02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root26/v_weapon.Right_Middle01/v_weapon.Right_Middle02/v_weapon.Right_Middle03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root27
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root27/v_weapon.Right_Ring01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root27/v_weapon.Right_Ring01/v_weapon.Right_Ring02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root27/v_weapon.Right_Ring01/v_weapon.Right_Ring02/v_weapon.Right_Ring03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root28
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root28/v_weapon.Right_Pinky01
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root28/v_weapon.Right_Pinky01/v_weapon.Right_Pinky02
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.eff18/v_weapon.Root23/v_weapon.Right_Hand/v_weapon.eff9/v_weapon.Root28/v_weapon.Right_Pinky01/v_weapon.Right_Pinky02/v_weapon.Right_Pinky03
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.Root98
+        weight: 1
+      - path: v_weapon/v_weapon.Hands_parent/v_weapon.Root36/v_weapon.Right_Arm/v_weapon.Root98/v_weapon.R_wrist_helper
+        weight: 1
+      - path: v_weapon.m4_Parent
+        weight: 1
+      - path: v_weapon.m4_Parent/v_weapon.cube_Trigger
+        weight: 1
+      - path: v_weapon.m4_Parent/v_weapon.m4_Clip
+        weight: 1
+      - path: v_weapon.m4_Parent/v_weapon.m4_Eject
+        weight: 1
+      - path: v_weapon.m4_Parent/v_weapon.m4_Silencer
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 3
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
