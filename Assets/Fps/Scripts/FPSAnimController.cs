@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class FPSAnimController : MonoBehaviour {
+public class FPSAnimController : NetworkBehaviour {
 
     private Animator anim;
 
@@ -24,16 +25,18 @@ public class FPSAnimController : MonoBehaviour {
 
     public RuntimeAnimatorController animControllerPistol, animControllerGun;
 
+    private NetworkAnimator networkAnim;
     private Transform chest;
     void Awake()
     {
         anim = GetComponent<Animator>();
-
+        networkAnim = GetComponent<NetworkAnimator>();
+        chest = anim.GetBoneTransform(HumanBodyBones.Chest);
     }
 
     void Start()
     {
-        chest = anim.GetBoneTransform(HumanBodyBones.Chest);
+       
     }
 
 
@@ -60,6 +63,7 @@ public class FPSAnimController : MonoBehaviour {
     public void PlayerCrouchWalk(float magnitude)
     {
         anim.SetFloat(CROUCH_WALK, magnitude);
+
     }
 
 
@@ -68,9 +72,12 @@ public class FPSAnimController : MonoBehaviour {
         if(isStanding)
         {
             anim.SetTrigger(PISTOL_STANDSHOOT);
-        }else
+            networkAnim.SetTrigger(PISTOL_STANDSHOOT);
+        }
+        else
         {
             anim.SetTrigger(PISTOL_CROUCHSHOOT);
+            networkAnim.SetTrigger(PISTOL_CROUCHSHOOT);
         }
     }
 
@@ -79,6 +86,7 @@ public class FPSAnimController : MonoBehaviour {
     public void Reload()
     {
         anim.SetTrigger(PISTOL_RELOAD);
+        networkAnim.SetTrigger(PISTOL_RELOAD);
     }
 
     public void ChangeAnimationController(bool isPistol)

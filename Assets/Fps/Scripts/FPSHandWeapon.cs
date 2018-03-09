@@ -12,6 +12,7 @@ public class FPSHandWeapon : FPSWeaponBase
 
     [SerializeField]
     private GameObject muzzleFlash;
+  
 
     private AudioSource audioManager;
 
@@ -20,18 +21,19 @@ public class FPSHandWeapon : FPSWeaponBase
     private const string SHOOT_SILENCER = "ShootSilencer";
     private const string SILENCER = "AddSilencer";
     private bool addSilencer = false;
+    
     void Awake()
     {
         anim = GetComponent<Animator>();
         //muzzleFlash = transform.Find("MuzzleFlash").gameObject;
         muzzleFlash.SetActive(false);
         audioManager = GetComponent<AudioSource>();
+
     }
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -65,7 +67,8 @@ public class FPSHandWeapon : FPSWeaponBase
         if(!addSilencer)
             StartCoroutine(TurnOnMuzzleFlash());
         anim.CrossFadeInFixedTime(shootAnim, 0.15f);
-  
+
+     
     }
 
 

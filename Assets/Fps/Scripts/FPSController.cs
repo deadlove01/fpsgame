@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class FPSController : MonoBehaviour {
+public class FPSController : NetworkBehaviour {
 
     [SerializeField]
     public float walkSpeed = 10f;
@@ -46,6 +47,7 @@ public class FPSController : MonoBehaviour {
 
     [SerializeField]
     private WeaponManager _weaponManager;
+    
     private FPSWeapon _currentWeapon;
     
     [SerializeField]
@@ -55,13 +57,23 @@ public class FPSController : MonoBehaviour {
     private WeaponManager _weaponHandManager;
     private FPSHandWeapon _currentHandWeapon;
 
+    [SerializeField]
+    private GameObject concreteImpact;
+
+
+    [SerializeField] private FPSMouseLook[] mouseLooks;
+    [SerializeField] private GameObject playerHolder, weaponHolder;
+    [SerializeField] private GameObject[] weaponWorld;
+
+    [SyncVar]
+    int weaponIndex = 0;
     // Use this for initialization
     void Start () {
         fpsView = transform.Find("FPSView").transform;
         charController = transform.GetComponent<CharacterController>();
         animController = transform.GetComponent<FPSAnimController>();
-        _camera = Camera.main;
-        fpsMouseLook.Init(transform, _camera.transform);
+       
+      
 
         rayDistance = charController.height * 0.5f + charController.radius;
         defaultControllerHeight = charController.height;
@@ -73,17 +85,91 @@ public class FPSController : MonoBehaviour {
         isCrouching = false;
 
         // get first weapon
-        var weaponGO = _weaponManager.weapons[0];
-        weaponGO.SetActive(true);
-        _currentWeapon = weaponGO.GetComponent<FPSWeapon>();
+        weaponIndex = 0;
+        LocalSelectWeapon(0);
+        if (isServer)
+        {
+            RpcChooseWeapon(0);
+        }
+        else
+        {
+            CmdChooseWeapon(0);
+        }
+        //var weaponGO = _weaponManager.weapons[weaponIndex];
+        //_lastWeapon = weaponGO;
+        //weaponGO.SetActive(true);
+        //_currentWeapon = weaponGO.GetComponent<FPSWeapon>();
 
-        var weaponHandGO = _weaponHandManager.weapons[0];
-        weaponHandGO.SetActive(true);
-        _currentHandWeapon = weaponHandGO.GetComponent<FPSHandWeapon>();
+
+        //var weaponHandGO = _weaponHandManager.weapons[weaponIndex];
+        //weaponHandGO.SetActive(true);
+        //_currentHandWeapon = weaponHandGO.GetComponent<FPSHandWeapon>();
+
+
+        if (isLocalPlayer)
+        {
+            playerHolder.layer = LayerMask.NameToLayer("Player");
+
+            foreach (Transform child in playerHolder.transform)
+            {
+                child.gameObject.layer = LayerMask.NameToLayer("Player");
+            }
+
+            foreach (GameObject child in weaponWorld)
+            {
+                child.layer = LayerMask.NameToLayer("Player");
+            }
+
+            weaponHolder.layer = LayerMask.NameToLayer("Enemy");
+
+            foreach (Transform child in weaponHolder.transform)
+            {
+                child.gameObject.layer = LayerMask.NameToLayer("Enemy");
+            }
+        }
+        else
+        {
+            playerHolder.layer = LayerMask.NameToLayer("Enemy");
+
+            foreach (Transform child in playerHolder.transform)
+            {
+                child.gameObject.layer = LayerMask.NameToLayer("Enemy");
+            }
+
+            foreach (GameObject child in weaponWorld)
+            {
+                child.layer = LayerMask.NameToLayer("Enemy");
+            }
+
+
+            weaponHolder.layer = LayerMask.NameToLayer("Enemy");
+
+            foreach (Transform child in weaponHolder.transform)
+            {
+                child.gameObject.layer = LayerMask.NameToLayer("Enemy");
+            }
+        }
+
+        //_camera = Camera.main;
+        _camera = fpsView.Find("FPS Camera").GetComponent<Camera>();
+        fpsMouseLook.Init(transform, _camera.transform);
+        _camera.gameObject.SetActive(false);
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(!isLocalPlayer)
+        {
+            return;
+        }
+        else
+        {
+            if (!_camera.gameObject.activeInHierarchy)
+            {
+                _camera.gameObject.SetActive(true);
+            }
+        }
         RotateView();
 
         if(isGrounded)
@@ -91,21 +177,29 @@ public class FPSController : MonoBehaviour {
             PlayerCrouchingAndSprinting();
             PlayerJump();      
         }
-        SelectWeapon();
+	    SelectWeapon();
     }
 
 
     void FixedUpdate()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         PlayerMovement();
         fpsMouseLook.UpdateCursorLock();
     }
 
     void LateUpdate()
     {
-        if(animController!= null)
+        if (!isLocalPlayer)
         {
-            LookToGunDirection();
+            return;
+        }
+        if (animController!= null)
+        {
+           // LookToGunDirection();
         }
     }
 
@@ -310,62 +404,134 @@ public class FPSController : MonoBehaviour {
                 animController.Shoot(true);
             }
             _currentHandWeapon.Shoot();
-            
+
+            // check hit
+            RaycastHit hit;
+            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit))
+            {
+                Instantiate(concreteImpact, hit.point, Quaternion.LookRotation(hit.normal));
+            }
+
         }
-        
+
     }
 
 
     void SelectWeapon()
     {
-        int changeWeapon = -1;
+        
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            changeWeapon = 0;
-        }else if (Input.GetKeyDown(KeyCode.Alpha2))
+            
+            LocalSelectWeapon(0);
+            if (isServer)
+            {
+                RpcChooseWeapon(0);
+            }
+            else
+            {
+                CmdChooseWeapon(0);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            changeWeapon = 1;
+            LocalSelectWeapon(1);
+            if (isServer)
+            {
+                RpcChooseWeapon(1);
+            }
+            else
+            {
+                CmdChooseWeapon(1);
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            changeWeapon = 2;
-        }
-        if (changeWeapon != -1)
-        {
-            var weapons = _weaponManager.weapons;
-            var handWeapons = _weaponHandManager.weapons;
-            if (changeWeapon <= weapons.Length - 1)
+            LocalSelectWeapon(2);
+            if (isServer)
             {
-                if(!weapons[changeWeapon].activeInHierarchy)
-                {
-                    // 3d view
-                    for (int i = 0; i < weapons.Length; i++)
-                    {
-                        weapons[i].SetActive(false);
-                    }
-                    _currentWeapon = null;
-                    weapons[changeWeapon].SetActive(true);
-                    _currentWeapon = weapons[changeWeapon].GetComponent<FPSWeapon>();
-
-                    // local user view
-                    for (int i = 0; i < handWeapons.Length; i++)
-                    {
-                        handWeapons[i].SetActive(false);
-                    }
-
-                    _currentHandWeapon = null;
-                    handWeapons[changeWeapon].SetActive(true);
-                    _currentHandWeapon = handWeapons[changeWeapon].GetComponent<FPSHandWeapon>();
-
-                    animController.ChangeAnimationController(_currentWeapon.CurrentWeaponType == FPSWeaponBase.WeaponType.Pistol);
-                }
+                RpcChooseWeapon(2);
             }
-
-
+            else
+            {
+                CmdChooseWeapon(2);
+            }
         }
+    
+    }
+
+    
+
+    void LocalSelectWeapon(int index)
+    {
+        var weapons = _weaponManager.weapons;
+        var handWeapons = _weaponHandManager.weapons;
+
+        weaponIndex = index;
+        if (weaponIndex <= weapons.Length - 1)
+        {
+           
+            if (!weapons[weaponIndex].activeInHierarchy)
+            {
+                // 3d view
+                for (int i = 0; i < weapons.Length; i++)
+                {
+                    weapons[i].SetActive(false);
+                }
+
+                _currentWeapon = null;
+                weapons[weaponIndex].SetActive(true);
+                _currentWeapon = weapons[weaponIndex].GetComponent<FPSWeapon>();
+
+
+                // local user view
+                for (int i = 0; i < handWeapons.Length; i++)
+                {
+                    handWeapons[i].SetActive(false);
+                }
+
+                _currentHandWeapon = null;
+                handWeapons[weaponIndex].SetActive(true);
+                _currentHandWeapon = handWeapons[weaponIndex].GetComponent<FPSHandWeapon>();
+
+                animController.ChangeAnimationController(_currentWeapon.CurrentWeaponType == FPSWeaponBase.WeaponType.Pistol);
+           
+            }
+        }
+
+
+    }
+
+
+    [Command]
+    void CmdChooseWeapon(int index)
+    {
+        LocalSelectWeapon(index);
+        RpcChooseWeapon(index);
+    }
+
+
+    
+    [ClientRpc]
+    void RpcChooseWeapon(int index)
+    {
+        if (isLocalPlayer)
+            return;
+        LocalSelectWeapon(index);
     }
     private void RotateView()
     {
-        fpsMouseLook.LookRotation(transform, _camera.transform);
+        if (isLocalPlayer)
+        {
+            //if (mouseLooks != null)
+            //{
+            //    for (int i = 0; i < mouseLooks.Length; i++)
+            //    {
+            //        mouseLooks[i].
+            //    }
+            //}
+            fpsMouseLook.LookRotation(transform, _camera.transform);
+        }
+       
     }
 }
