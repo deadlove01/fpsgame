@@ -56,9 +56,7 @@ public class FPSController : NetworkBehaviour {
     [SerializeField]
     private WeaponManager _weaponHandManager;
     private FPSHandWeapon _currentHandWeapon;
-
-    [SerializeField]
-    private GameObject concreteImpact;
+    
 
 
     [SerializeField] private FPSMouseLook[] mouseLooks;
@@ -67,12 +65,14 @@ public class FPSController : NetworkBehaviour {
 
     [SyncVar]
     int weaponIndex = 0;
+
+    private FPSCombatController combatController;
     // Use this for initialization
     void Start () {
         fpsView = transform.Find("FPSView").transform;
         charController = transform.GetComponent<CharacterController>();
         animController = transform.GetComponent<FPSAnimController>();
-       
+        combatController = GetComponent<FPSCombatController>();
       
 
         rayDistance = charController.height * 0.5f + charController.radius;
@@ -155,8 +155,14 @@ public class FPSController : NetworkBehaviour {
         fpsMouseLook.Init(transform, _camera.transform);
         _camera.gameObject.SetActive(false);
     }
-	
-	// Update is called once per frame
+
+    public override void OnStartLocalPlayer()
+    {
+        tag = "Player";
+    }
+
+
+    // Update is called once per frame
 	void Update () {
 
         if(!isLocalPlayer)
@@ -406,11 +412,7 @@ public class FPSController : NetworkBehaviour {
             _currentHandWeapon.Shoot();
 
             // check hit
-            RaycastHit hit;
-            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit))
-            {
-                Instantiate(concreteImpact, hit.point, Quaternion.LookRotation(hit.normal));
-            }
+            combatController.CheckHit(_camera);
 
         }
 

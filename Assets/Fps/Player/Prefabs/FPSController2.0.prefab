@@ -4206,7 +4206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1751517769108844
 GameObject:
   m_ObjectHideFlags: 1
@@ -4330,9 +4330,11 @@ GameObject:
   - component: {fileID: 114597637513712902}
   - component: {fileID: 114382712393624116}
   - component: {fileID: 114299796409068138}
+  - component: {fileID: 114697318394441496}
+  - component: {fileID: 114472233570232882}
   m_Layer: 0
   m_Name: FPSController2.0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11438,7 +11440,6 @@ MonoBehaviour:
   _weaponManager: {fileID: 114510180260755686}
   offset: {x: 33, y: 11.37, z: -90}
   _weaponHandManager: {fileID: 114444256385586388}
-  concreteImpact: {fileID: 100002, guid: 2b4ffdf4a64f87d4ca3c0de925e6d343, type: 2}
   mouseLooks: []
   playerHolder: {fileID: 1480543651463586}
   weaponHolder: {fileID: 1076725862922740}
@@ -11518,6 +11519,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114472233570232882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767177154274858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0743340f246846a4b8183801c72e975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodImpact: {fileID: 100006, guid: cb771650f86a58a46ab01616eef4650c, type: 2}
+  concreteImpact: {fileID: 100002, guid: 2b4ffdf4a64f87d4ca3c0de925e6d343, type: 2}
 --- !u!114 &114510180260755686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11599,6 +11613,18 @@ MonoBehaviour:
   shootSilencerClip: {fileID: 0}
   reloadClip: []
   muzzleFlash: {fileID: 1895264465294374}
+--- !u!114 &114697318394441496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767177154274858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f48b9db4f19e448bdeecd9f3d8ff56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &114704054985307498
 MonoBehaviour:
   m_ObjectHideFlags: 1
