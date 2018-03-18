@@ -162,6 +162,11 @@ public class FPSController : NetworkBehaviour {
     }
 
 
+    public void CursorLock(bool value)
+    {
+        fpsMouseLook.SetCursorLock(value);
+    }
+
     // Update is called once per frame
 	void Update () {
 

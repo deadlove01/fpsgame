@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator LoadAsync(string levelName)
     {
-        yield return new WaitForSeconds(2);
+       // yield return new WaitForSeconds(2);
         print("loading screen: "+loadingScreen.activeInHierarchy);
         var opeation = SceneManager.LoadSceneAsync(levelName);
         opeation.allowSceneActivation = false;
@@ -32,16 +32,16 @@ public class LevelManager : MonoBehaviour
         {
             float progress = Mathf.Clamp01(opeation.progress / 0.9f);
             slider.value = progress;
-            print(progress);
+        
             loadingText.text = progress * 100f + "%";
             if (progress >= 0.9f)
             {
                
                 loadingText.text += ", Press any key to continue!";
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    opeation.allowSceneActivation = true;
-                }
+                //if (Input.GetKeyDown(KeyCode.Space))
+                //{
+                opeation.allowSceneActivation = true;
+                //}
             }
             yield return null;
 

@@ -4332,6 +4332,7 @@ GameObject:
   - component: {fileID: 114299796409068138}
   - component: {fileID: 114697318394441496}
   - component: {fileID: 114472233570232882}
+  - component: {fileID: 114102372254727468}
   m_Layer: 0
   m_Name: FPSController2.0
   m_TagString: Enemy
@@ -11292,6 +11293,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114102372254727468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767177154274858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83da4700dc8eadc4497a230d0097b04b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114133177476945258
 MonoBehaviour:
   m_ObjectHideFlags: 1
