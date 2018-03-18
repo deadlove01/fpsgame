@@ -52,14 +52,19 @@ public class CustomNetworkManager : NetworkManager
     void OnLevelWasLoaded(int level)
     {
         print("level: " + level);
-        if (level == 0)
+        if (level == 1)
         {
             SetupMenuScene();
         }
-        else if (level == 1)
+        else if (level == 2)
         {
             SetupIngameScene();
         }
+    }
+
+    void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
 
@@ -72,19 +77,23 @@ public class CustomNetworkManager : NetworkManager
         var btnJoinGame = GameObject.Find("BtnJoinGame").GetComponent<Button>();
         btnJoinGame.onClick.RemoveAllListeners();
         btnJoinGame.onClick.AddListener(JoinGame);
+
+        var btnBack = GameObject.Find("BackToMainMenu").GetComponent<Button>();
+        btnBack.onClick.RemoveAllListeners();
+        btnBack.onClick.AddListener(BackToMainMenu);
     }
 
 
     void SetupIngameScene()
     {
-        //var menuGO = GameObject.Find("IngameMenu");
-        //foreach (var componentsInChild in menuGO.GetComponentsInChildren<Transform>())
-        //{
-        //    Console.WriteLine(componentsInChild.gameObject.name);
-        //}
-        //var btnDisconnect = GameObject.Find("BtnDisconnect").GetComponent<Button>();
-        //btnDisconnect.onClick.RemoveAllListeners();
-        //btnDisconnect.onClick.AddListener(NetworkManager.singleton.StopHost);
+        var menuGO = GameObject.Find("IngameMenu");
+        foreach (var componentsInChild in menuGO.GetComponentsInChildren<Transform>())
+        {
+            Console.WriteLine(componentsInChild.gameObject.name);
+        }
+        var btnDisconnect = GameObject.Find("BtnDisconnect").GetComponent<Button>();
+        btnDisconnect.onClick.RemoveAllListeners();
+        btnDisconnect.onClick.AddListener(NetworkManager.singleton.StopHost);
     }
 
 }

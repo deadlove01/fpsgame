@@ -67,13 +67,19 @@ public class FPSController : NetworkBehaviour {
     int weaponIndex = 0;
 
     private FPSCombatController combatController;
+
+    private PlayerHealth playerHealth;
+    private CameraDeath camDeath;
+    
     // Use this for initialization
     void Start () {
         fpsView = transform.Find("FPSView").transform;
         charController = transform.GetComponent<CharacterController>();
         animController = transform.GetComponent<FPSAnimController>();
         combatController = GetComponent<FPSCombatController>();
-      
+        playerHealth = GetComponent<PlayerHealth>();
+        camDeath = GetComponent<CameraDeath>();
+
 
         rayDistance = charController.height * 0.5f + charController.radius;
         defaultControllerHeight = charController.height;
@@ -394,12 +400,35 @@ public class FPSController : NetworkBehaviour {
             _currentHandWeapon.Reload();
         }
 
-        if(Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            _currentHandWeapon.AddSilencer();
+            playerHealth.TakeDamage(20);
+        }
+
+        //if(Input.GetMouseButtonDown(1))
+        //{
+        //    _currentHandWeapon.AddSilencer();
+        //}
+
+        if (playerHealth.health <= 0)
+        {
+            animController.Death(isCrouching);
+            this.enabled = false;
+            camDeath.LookAtDeathBody();
+            StartCoroutine(RespawnPlayer());
+           
         }
     }
 
+
+    IEnumerator RespawnPlayer()
+    {
+        yield return new WaitForSeconds(10);
+        playerHealth.RpcRespawn();
+        camDeath.Reset();
+        animController.Respawn();
+        this.enabled = true;
+    }
 
     private void Shoot()
     {

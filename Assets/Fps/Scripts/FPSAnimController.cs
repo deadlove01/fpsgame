@@ -21,7 +21,8 @@ public class FPSAnimController : NetworkBehaviour {
     private const string MG_STANDSHOOT = "MgStandShoot";
     private const string MG_CROUCHSHOOT = "MgCrouchShoot";
     private const string MG_RELOAD = "MgReload";
-
+    private const string STANDING_DEATH = "StandingDeath";
+    private const string CROUCHING_DEATH = "CrouchingDeath";
 
     public RuntimeAnimatorController animControllerPistol, animControllerGun;
 
@@ -98,6 +99,24 @@ public class FPSAnimController : NetworkBehaviour {
         {
             anim.runtimeAnimatorController = animControllerGun;
         }
+    }
+
+    public void Death(bool isCrouching)
+    {
+        if (isCrouching)
+        {
+            anim.SetBool(CROUCHING_DEATH, true);
+        }
+        else
+        {
+            anim.SetBool(STANDING_DEATH, true);
+        }
+    }
+
+    public void Respawn()
+    {
+        anim.SetBool(CROUCHING_DEATH, false);
+        anim.SetBool(STANDING_DEATH, false);
     }
 
     //public void MachineGunShoot(bool isStanding)
